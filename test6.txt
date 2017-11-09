@@ -1,0 +1,119 @@
+下载地址：http://files.chi.pfsense.org/mirror/downloads/
+
+AdultFriendFinder.com	约会和娱乐公司
+
+
+推荐版本：
+
+pfSense-2.0.1-RELEASE-4g-i386-nanobsd_vga.img.gz 硬盘安装用这个内存版
+
+pfSense-2.0.1-RELEASE-i386.iso.gz 光盘硬盘版
+
+pfSense-2.0.1-RELEASE-512mb-i386-nanobsd.img.gz 电子盘512M版本用这个
+
+
+汉化文件地址和教程地址如下
+
+最新汉化包下载地址：pfsense2.0.1汉化文档1.6稳定版【微笑最新作品】http://bbs.tl20.com/forum.php?mod=viewthread&tid=2750&fromuid=1
+
+pfs系列教程地址：
+微笑在这里总结出pfsense入门教程集合入口地址【更新中】
+http://bbs.tl20.com/forum.php?mod=viewthread&tid=2710&fromuid=1
+
+pfsense论坛技术支持：维深信息港 http://bbs.tl20.com
+
+
+hostname nor servname provided or not known
+
+
+
+
+请问那些自动生成的计划任务分别是什么意思？0 4 * * * /var/www/extsuite/extman/tools/expireusers.pl -all postmaster@c
+ 30 4 * * * /var/www/extsuite/extman/tools/reportusage.pl -all /home/domai
+ 0 0 1 * * wget -N -P /usr/share/spamassassin www.ccert.edu.cn/spam/sa/Chi
+ 0 5 * * sun /usr/local/slockd/tools/log-rotate /usr/bin/gzip
+ 0 0 * * * /usr/bin/mysql -u dspam -p'123456' dspam < /usr/share/dspam/sql
+ 0 0 * * * /usr/bin/dspam_logrotate -a 30 -d /var/spool/dspam/data
+ * * * * * /usr/bin/php /var/www/extsuite/monitor/update.php &> /dev/null
+
+ 01 */1 * * * /usr/bin/perl /var/www/extsuite/extmail/tools/cleansid.pl /v 
+
+
+
+4点发送用户状态报告（每天postmaster会收到二封邮件，就是这个自动发送的）
+ 0 4 * * * /var/www/extsuite/extman/tools/expireusers.pl -all postmaster@c
+ 30 4 * * * /var/www/extsuite/extman/tools/reportusage.pl -all /home/domai
+ 每周一升级垃圾关键字
+ 0 0 1 * * wget -N -P /usr/share/spamassassin www.ccert.edu.cn/spam/sa/Chi
+ 每天5点打包log-rotate日志
+ 0 5 * * sun /usr/local/slockd/tools/log-rotate /usr/bin/gzip
+ 每天0点学习的数据导入到mysql （判断垃圾邮件，给邮件评分）
+ 0 0 * * * /usr/bin/mysql -u dspam -p'123456' dspam < /usr/share/dspam/sql
+ 0 0 * * * /usr/bin/dspam_logrotate -a 30 -d /var/spool/dspam/data
+ 运行update.php升级 update.php里写的是什么程序就是干什么
+ * * * * * /usr/bin/php /var/www/extsuite/monitor/update.php &> /dev/null
+ 01 */1 * * * /usr/bin/perl /var/www/extsuite/extmail/tools/cleansid.pl /v
+
+
+
+
+
+
+!
+interface FastEthernet0/20
+ switchport access vlan 281
+ switchport mode access
+ switchport port-security
+ switchport port-security maximum 25
+ switchport port-security violation restrict
+ switchport port-security mac-address sticky
+ switchport port-security mac-address sticky 0014.85e3.0e4d
+ switchport port-security mac-address sticky 0016.e632.3aa5
+ switchport port-security mac-address sticky 0017.6110.605b
+ switchport port-security mac-address sticky 0017.617b.53f4
+ switchport port-security mac-address sticky 0021.2799.45bf
+ switchport port-security mac-address sticky 0023.ae86.a43e
+ switchport port-security mac-address sticky 0027.199f.f395
+ switchport port-security mac-address sticky 00e0.4c46.2081
+ switchport port-security mac-address sticky 0811.96e2.72d0
+ switchport port-security mac-address sticky 18dc.56d0.4b4a
+ switchport port-security mac-address sticky 4437.e690.dbe2
+ switchport port-security mac-address sticky 4437.e69f.49ea
+ switchport port-security mac-address sticky 7ce9.d3f6.944f
+ switchport port-security mac-address sticky 8c21.0ae4.b49a
+ switchport port-security mac-address sticky d43d.7e20.73f9
+ switchport port-security mac-address sticky d43d.7e20.7fd5
+ switchport port-security mac-address sticky d4ee.0709.314e
+ switchport port-security mac-address sticky eca8.6b93.176e
+ switchport port-security mac-address sticky f0ad.4e02.0685
+ switchport port-security mac-address sticky f0de.f11a.e013
+switchport port-security mac-address sticky 4437.e69e.a030
+
+
+
+魔方大世界
+感谢公司给予我这么好的一个平台，同时也感谢康总这段时间对我的认可。
+       只是因自身原因，想腾点时间去处理自己的一些紧急事情，所以在此提出离职申请，希望能够理解与批准。
+        现公司人力跟行政只剩下3人，许亚佳（前台兼助理）也提出了离职，如此一来事情有点多和乱。在职期间，我会尽力做好本分工作。不过希望能尽快招人或安排其他人员进行交接，这样才能将细节一点点交接清楚，望理解。
+        期望离职时间：10月26日
+
+SELECT     TOP (2000) AssetID, AssetStoreID, AssetTypeID, AssetNumber, AssetName, AssetBrand, AssetModel, AssetSn, AssetState, AssetFactory, AssetBuyUserCode, 
+                      AssetBuyUserName, AssetBuyTime, AssetBuyPrice, AssetCanBorrowFlag, AssetDetail, AssetRemark, AssetSubUserCode, AssetSubUserName, AssetSubTime, 
+                      AssetUseFlag, AssetUseListID, AssetDisposeFlag, AssetDelFlag, AssetTreatmentID, AssetLeaveFiled1, AssetLeaveFiled2, AssetLeaveFiled3, AssetLeaveFiled4, 
+                      AssetLeaveFiled5, AssetLeaveFiled6, AssetLeaveFiled7, AssetLeaveFiled8, AssetLeaveFiled9, AssetLeaveFiled10, AssetLeaveFiled11, AssetLeaveFiled12, 
+                      AssetLeaveFiled13, AssetLeaveFiled14, AssetLeaveFiled15
+FROM         Asset
+WHERE     (AssetID = 1889)
+
+delete from Asset where AssetNumber ='WXLD-0201-0082';
+
+delete FROM  Asset  WHERE     (AssetID = 1889)
+
+
+ switchport access vlan 162
+ switchport mode access
+ switchport port-security
+ switchport port-security maximum 3
+ switchport port-security violation restrict
+ switchport port-security mac-address sticky
+ switchport port-security mac-address sticky 0024.1d97.c4d1
